@@ -63,7 +63,7 @@
     <div class="nav" mobile="close">
         <ul>
             <li class="flex-center">
-                <a href="#home" class="flex-center">
+                <a href="#" class="flex-center" onclick="window.scrollTo(0, 0)">
                     <div class="icon">
                         <ion-icon name="home-outline"></ion-icon>
                     </div>
@@ -74,7 +74,7 @@
                 </a>
             </li>
             <li class="flex-center">
-                <a href="#about" class="flex-center">
+                <a href="#" class="flex-center" onclick="window.scrollTo(0, 0)">
                     <div class="icon">
                         <ion-icon name="person-outline"></ion-icon>
                     </div>
@@ -95,38 +95,22 @@
                     </div>
                 </a>
             </li>
-            <li class="flex-center" id="settingsBtn">
-                <div class="icon">
-                    <ion-icon name="settings-outline"></ion-icon>
-                </div>
-                <div class="title">
-                    <p class="english">Settings</p>
-                    <p class="arabic">الاعدادات</p>
-                </div>
-            </li>
             <li class="flex-center" id="languageBtn">
-                <div class="icon">
-                    <ion-icon name="language-outline"></ion-icon>
-                </div>
-                <div class="title">
-                    <p class="english">Language</p>
-                    <p class="arabic">اللغة</p>
-                </div>
-            </li>
-            <li class="flex-center" id="moodBtn">
-                <div class="icon">
-                    <ion-icon name="moon-outline"></ion-icon>
-                </div>
-                <div class="title">
-                    <p class="english">Mood</p>
-                    <p class="arabic">المظهر</p>
-                </div>
+                <a href="#" class="flex-center">
+                    <div class="icon">
+                        <ion-icon name="language-outline"></ion-icon>
+                    </div>
+                    <div class="title">
+                        <p class="english">Language</p>
+                        <p class="arabic">تغيير اللغة</p>
+                    </div>
+                </a>
             </li>
         </ul>
     </div>
     <div class="mainContent flex-center flex-column">
-        <div class="section aboutAndSkills">
-            <div class="section about" id="about">
+        <div class="section aboutAndSkills active">
+            <div class="section about active" id="about">
                 <div class="sectionInfo">
                     <div class="title">
                         <p class="english">About</p>
@@ -243,10 +227,10 @@
                     <div class="row">
                         <div class="skillInfo">
                             <span class="name">Equipment Development</span><span class="percent"><span
-                                    class="numsAnimation" goal="35">0</span>%</span>
+                                    class="numsAnimation" goal="80">0</span>%</span>
                         </div>
                         <div class="skillBarContainer">
-                            <div class="skillBar" style="width: 35%;"></div>
+                            <div class="skillBar" style="width: 80%;"></div>
                             <div class="skillBarBG"></div>
                         </div>
                     </div>
@@ -289,15 +273,12 @@
                                     Creative in approaching problems and systematic about meeting all requirements.
                                 </p>
                                 <p class="arabic">
-                                    امتلك خبرة واسعة في استخدام الحاسب منذ 2011 بنظام ويندوز Xb ومن ثم ويندوز 7 واخيرا
-                                    ويندوز 10 <br>
-                                    اجيد التعامل كذلك مع نظام الماك واللينكس <br>
-                                    كذلك امتلك خبرة في استخدام الفوتوشوب منذ 2013 <br>
-                                    بدأت بتعلم البرمجة عام 2019
-                                    تعلمت لغة البايثون كمدخل للبرمجة <br>
-                                    ثم بدأت بتعلم تصميم تجربة المستخدم
-                                    للانتقال الى برمجة الويب عبر تعلمي مسار الفرونت اند
-                                    واطمح الى اكمال رحلتي حتى اصبح مبرمج ويب فل ستاك.
+                                    الاجدر لتولي أي مهمة لدعم الفريق ومساعدة الأعمال على النجاح.<br>
+                                    يوفر تطويرًا قويًا لسير العمل وكتابة التقارير الفنية وقدرات العصف الذهني.
+                                    إلى جانب المعرفة الهندسية المهنية المدربة تدريباً عالياً وذوي الخبرة في الأنظمة
+                                    الطبية الحيوية.<br>
+                                    يجمع ويحدد المتطلبات ويبني حلولاً فورية للاحتياجات المتنوعة.<br>
+                                    مبدع في التعامل مع المشاكل ومنهجي في تلبية جميع المتطلبات.
                                 </p>
                             </div>
                         </div>
@@ -309,60 +290,82 @@
                         </div>
                         <div class="content coursesContent">
                             <div class="title">
-                                <p>Insurance Foundation (IFCE) :</p>
+                                <p class="english">Insurance Foundation (IFCE) :</p>
+                                <p class="arabic">اساسيات التامين :</p>
                             </div>
                             <div class="resumeContent">
                                 <ul>
-                                    <li><span cer="IFCE" class="fontBold"
-                                            onclick="showCertificate(this.getAttribute('cer'))">click to
-                                            see certificate !</span></li>
+                                    <li cer="IFCE" onclick="showCertificate(this.getAttribute('cer'))">
+                                        <p class="english fontBold">click to see certificate !</p>
+                                        <p class="arabic fontBold">اضغط هنا لرؤية الشهادة !</p>
+                                    </li>
                                 </ul>
                                 <div class="img">
                                     <img id="IFCE" src="./assets/imgs/Certifications/IFCE.png" alt="">
                                 </div>
                             </div>
                             <div class="title">
-                                <p>Occupational Safety and Health Administration (OSHA) :</p>
+                                <p class="english">Occupational Safety and Health Administration (OSHA) :</p>
+                                <p class="arabic">السلامة والصحة المهنية :</p>
                             </div>
                             <div class="resumeContent">
                                 <ul>
-                                    <li><span class="fontBold">click to see certificate !</span></li>
+                                    <li cer="OSHA" onclick="showCertificate(this.getAttribute('cer'))">
+                                        <p class="english fontBold">click to see certificate !</p>
+                                        <p class="arabic fontBold">اضغط هنا لرؤية الشهادة !</p>
+                                    </li>
+                                </ul>
+                                <img id="OSHA" src="./assets/imgs/Certifications/OSHA.png" alt="">
+                            </div>
+                            <div class="title">
+                                <p class="english">International English Language Testing System (IELTS) :</p>
+                                <p class="arabic">الشهادات :</p>
+                            </div>
+                            <div class="resumeContent">
+                                <ul>
+                                    <li>
+                                        <span class="fontBold">click to see certificate !</span>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="title">
-                                <p>International English Language Testing System (IELTS) :</p>
+                                <p class="english">Saudi Commission for Health specialties (SCHS) :</p>
+                                <p class="arabic">الهيئة السعودية للتخصصات الطبية :</p>
                             </div>
                             <div class="resumeContent">
                                 <ul>
-                                    <li><span class="fontBold">click to see certificate !</span></li>
+                                    <li cer="SCHS" onclick="showCertificate(this.getAttribute('cer'))">
+                                        <p class="english fontBold">click to see certificate !</p>
+                                        <p class="arabic fontBold">اضغط هنا لرؤية الشهادة !</p>
+                                    </li>
                                 </ul>
+                                <img id="SCHS" src="./assets/imgs/Certifications/SCHS.png" alt="">
                             </div>
                             <div class="title">
-                                <p>Saudi Commission for Health specialties (SCHS) :</p>
+                                <p class="english">Saudi Council of Engineers (SCE) :</p>
+                                <p class="arabic">الهيئة السعودية للمهندسين :</p>
                             </div>
                             <div class="resumeContent">
                                 <ul>
-                                    <li><span class="fontBold">click to see certificate !</span></li>
-                                </ul>
-                            </div>
-                            <div class="title">
-                                <p>Saudi Council of Engineers (SCE) :</p>
-                            </div>
-                            <div class="resumeContent">
-                                <ul>
-                                    <li><span cer="SCE" class="fontBold"
-                                            onclick="showCertificate(this.getAttribute('cer'))">click to
-                                            see certificate !</span></li>
+                                    <li cer="SCE" onclick="showCertificate(this.getAttribute('cer'))">
+                                        <p class="english fontBold">click to see certificate !</p>
+                                        <p class="arabic fontBold">اضغط هنا لرؤية الشهادة !</p>
+                                    </li>
                                 </ul>
                                 <img id="SCE" src="./assets/imgs/Certifications/SCE.png" alt="">
                             </div>
                             <div class="title">
-                                <p>National Fire Protection Association (NFPA) :</p>
+                                <p class="english">National Fire Protection Association (NFPA) :</p>
+                                <p class="arabic">الحماية ضد الحرايق والكوارث الطبيعية :</p>
                             </div>
                             <div class="resumeContent">
                                 <ul>
-                                    <li><span class="fontBold">click to see certificate !</span></li>
+                                    <li cer="NFPA" onclick="showCertificate(this.getAttribute('cer'))">
+                                        <p class="english fontBold">click to see certificate !</p>
+                                        <p class="arabic fontBold">اضغط هنا لرؤية الشهادة !</p>
+                                    </li>
                                 </ul>
+                                <img id="NFPA" src="./assets/imgs/Certifications/NFPA.jpeg" alt="">
                             </div>
                         </div>
                     </div>
@@ -376,7 +379,7 @@
                         <div class="content coursesContent">
                             <div class="title">
                                 <p class="english">Bachelor's of Biomedical Engineering :</p>
-                                <p class="arabic">مصمم تجربة وواجهات المستخدم :</p>
+                                <p class="arabic">بكالوريوس في الهندسة الطبية الحيوية :</p>
                             </div>
                             <div class="shape flex-center">
                                 <div>
@@ -388,10 +391,21 @@
                             <div class="resumeContent">
                                 <ul>
                                     <li>
-                                        <p class="english">Technology College of Riyadh, Riyadh, Saudi Arabia</p>
-                                        <p class="arabic">الكلية التقنية بالرياض, الرياض, المملكة العربية السعودية</p>
+                                        <p class="english">
+                                            Technology College<br>
+                                            Riyadh, Saudi Arabia
+                                        </p>
+                                        <p class="arabic">
+                                            الكلية التقنية <br>
+                                            الرياض, المملكة العربية السعودية
+                                        </p>
+                                    </li>
+                                    <li cer="Bachelor" onclick="showCertificate(this.getAttribute('cer'))">
+                                        <p class="english fontBold">click to see certificate !</p>
+                                        <p class="arabic fontBold">اضغط هنا لرؤية الشهادة !</p>
                                     </li>
                                 </ul>
+                                <img id="Bachelor" src="./assets/imgs/Certifications/Bachelor.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -402,13 +416,18 @@
                         </div>
                         <div class="content coursesContent">
                             <div class="title">
-                                <p>Roual Commission Medical Center :</p>
+                                <p class="english">Roual Commission Medical Center :</p>
+                                <p class="arabic">مركز الهيئة الملكية الطبي :</p>
                             </div>
                             <div class="shape flex-center big">
                                 <div>
-                                    <p>
+                                    <p class="english">
                                         2022 June - Present<br>
                                         Biomedical Engineer
+                                    </p>
+                                    <p class="arabic">
+                                        يونيو 2022 - حتى الان <br>
+                                        مهندس الطب الحيوي
                                     </p>
                                 </div>
                             </div>
@@ -417,43 +436,44 @@
                                     <li>
                                         <p class="english">Insure the safety of equipment failure and provide advice
                                             about the purchase and installation of new equipment.</p>
-                                        <p class="arabic">برمجت العديد من المشاريع التدريبية</p>
+                                        <p class="arabic">ضمان سلامة أعطال المعدات وتقديم المشورة بشأن شراء وتركيب معدات
+                                            جديدة.</p>
                                     </li>
                                     <li>
                                         <p class="english">Applying electronic and measurement techniques on biomedical
                                             equipment.</p>
-                                        <p class="arabic">استنسخت العديد من المواقع المشهورة</p>
+                                        <p class="arabic">تطبيق التقنيات الإلكترونية والقياسية في المعدات الطبية
+                                            الحيوية.</p>
                                     </li>
                                     <li>
                                         <p class="english">Install, adjust, and repair biomedical equipment.</p>
-                                        <p class="arabic">برمجت وادرت واجهة موقع <a href="https://eqla3tech.com/"
-                                                target="_blank" class="fontBold">Eqla3
-                                                Tech</a></p>
+                                        <p class="arabic">تركيب وتعديل وإصلاح المعدات الطبية الحيوية.</p>
                                     </li>
                                     <li>
                                         <p class="english">Document all action and test result.</p>
-                                        <p class="arabic">برمجت واجهة <span class="fontBold arabic">موقعي</span> الذي
-                                            تراه الان
-                                            ^_^</p>
+                                        <p class="arabic">توثيق كل الإجراءات ونتائج الاختبار.</p>
                                     </li>
                                     <li>
                                         <p class="english">Carry out the correction of the PPM procedures update.</p>
-                                        <p class="arabic">برمجت واجهة <span class="fontBold arabic">موقعي</span> الذي
-                                            تراه الان
-                                            ^_^</p>
+                                        <p class="arabic">قمت بتصحيح وتحديث إجراءات PPM.</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="content coursesContent">
                             <div class="title">
-                                <p>Alahlia Corporative Insurance Company :</p>
+                                <p class="english">Alahlia Corporative Insurance Company :</p>
+                                <p class="arabic">شركة اتحاد الخليج الاهلية للتأمين التعاوني :</p>
                             </div>
                             <div class="shape flex-center big">
                                 <div>
-                                    <p>
+                                    <p class="english">
                                         2017 November - 2021 August<br>
                                         Policy Admin
+                                    </p>
+                                    <p class="arabic">
+                                        نوفمبر 2017 - اغسطس 2021<br>
+                                        مسؤول وثائق التامين
                                     </p>
                                 </div>
                             </div>
@@ -463,19 +483,20 @@
                                         <p class="english">Delivered superior customer service by explaining insurance
                                             products, suggesting policy updates and guiding sales process to address
                                             customer needs.</p>
-                                        <p class="arabic">برمجت العديد من المشاريع التدريبية</p>
+                                        <p class="arabic">تقديم خدمة عملاء فائقة من خلال شرح منتجات التأمين واقتراح
+                                            تحديثات السياسة وتوجيه عملية البيع لتلبية احتياجات العملاء.</p>
                                     </li>
                                     <li>
                                         <p class="english">Increased client retention rates by optimizing customer
                                             service strategies.</p>
-                                        <p class="arabic">استنسخت العديد من المواقع المشهورة</p>
+                                        <p class="arabic">زيادة معدلات الاحتفاظ بالعملاء من خلال تحسين استراتيجيات خدمة
+                                            العملاء.</p>
                                     </li>
                                     <li>
                                         <p class="english">Collaborated with colleagues to reach business goals,
                                             maximize leads and generate sales opportunities.</p>
-                                        <p class="arabic">برمجت وادرت واجهة موقع <a href="https://eqla3tech.com/"
-                                                target="_blank" class="fontBold">Eqla3
-                                                Tech</a></p>
+                                        <p class="arabic">تعاونت مع الزملاء للوصول إلى أهداف العمل ، وزيادة العملاء
+                                            المتوقعين وخلق فرص المبيعات.</p>
                                     </li>
                                 </ul>
                             </div>
@@ -485,9 +506,6 @@
             </div>
         </div>
     </div>
-    <a href="#home" class="topArrow flex-center">
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
-    </a>
     <div class="footer" id="footer">
         <div class="sectionInfo">
             <div class="title">
@@ -495,30 +513,33 @@
                 <div></div>
             </div>
             <div class="subTitle">
-                you find me here
+                <p class="english">here you can contact with me :</p>
+                <p class="arabic">يمكنك التواصل معي من هنا :</p>
             </div>
         </div>
         <div class="sectionContent">
             <div class="social flex-center">
-                <a href="https://www.linkedin.com/in/abdullah-alqahtani-190441220/" target="_blank"
+                <a href="tel:+966594149030" target="_blank" class="icon Neum flex-center phone">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:xhassan.h@gmail.com" target="_blank" class="icon Neum flex-center email">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a>
+                <a href="https://wa.me/594149030" target="_blank" class="icon Neum flex-center whatsapp">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/beng-hassan-h-alqahtani-osha-ifce-nfpa-781218110" target="_blank"
                     class="icon Neum flex-center linkedin">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/iGreato1" target="_blank" class="icon Neum flex-center github">
-                    <i class="fa fa-github" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.behance.net/AbdullahAlqahtani1" target="_blank"
-                    class="icon Neum flex-center behance">
-                    <i class="fa fa-behance" aria-hidden="true"></i>
-                </a>
-                <a href="https://wa.link/nsnkqb" target="_blank" class="icon Neum flex-center whatsapp">
-                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                </a>
-                <a href="https://twitter.com/igreato1" target="_blank" class="icon Neum flex-center twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
             </div>
-            <p>Copyright 2022 &copy; All Rights Reserved | Designed By <a href="#about">Abdullah-Alqahtani.me</a></p>
+            <p class="english">Copyright 2022 &copy; All Rights Reserved | Designed By <a
+                    href="https://www.Abdullah-Alqahtani.me" target="_blank">Abdullah-Alqahtani.me</a></p>
+            <p class="arabic">
+                جميع الحقوق محفوظة &copy; 2022 | صُنع بواسطة <a href="https://www.Abdullah-Alqahtani.me"
+                    target="_blank">Abdullah-Alqahtani.me</a>
+            </p>
+
         </div>
     </div>
 

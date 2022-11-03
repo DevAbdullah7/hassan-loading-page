@@ -10,7 +10,7 @@
 
 
 /* ========== Mobiles Size ========== */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
 
     html,
     body {
@@ -48,7 +48,7 @@
 
     .section {
         position: relative;
-        padding: 60px 0 0;
+        padding: 35px 0 0;
         transform: translateY(150px);
         opacity: 0;
         transition: .5s all ease-in-out;
@@ -189,30 +189,6 @@
         text-transform: uppercase;
         font-size: var(--big-size);
         color: var(--firstTyColorLight);
-    }
-
-    p.english {
-        font-family: var(--english-font);
-    }
-
-    p.arabic {
-        font-family: var(--arabic-font);
-    }
-
-    .html.english p.english {
-        display: block;
-    }
-
-    .html.english p.arabic {
-        display: none;
-    }
-
-    .html.arabic p.english {
-        display: none;
-    }
-
-    .html.arabic p.arabic {
-        display: block;
     }
 
     /* ========== End Global Class ========== */
@@ -384,7 +360,8 @@
         border-radius: 15px;
     }
 
-    .nav a.flex-center {
+    .nav a.flex-center,
+    .nav li.flex-center {
         justify-content: flex-start;
     }
 
@@ -430,78 +407,9 @@
         opacity: 1;
     }
 
-    .nav ul li#languageBtn,
-    .nav ul li#moodBtn {
-        width: 100px;
-    }
-
-    .nav ul li#languageBtn .title,
-    .nav ul li#moodBtn .title,
-    .nav ul li#languageBtn.active .title,
-    .nav ul li#moodBtn.active .title {
-        display: none;
-    }
-
     /* ========== MAIN CONTENT ========== */
     .mainContent {
         width: 90%;
-    }
-
-    /* ----- HOME ----- */
-    .homeSectionContent {
-        top: 4%;
-        left: -29%;
-        gap: 10% 55%;
-        transform: rotate(90deg);
-    }
-
-    .homeSectionContent .shape {
-        width: 250px;
-        height: 250px;
-        flex-direction: row;
-    }
-
-    @media only screen and (max-width: 379px) {
-        .homeSectionContent {
-            top: -5%;
-        }
-    }
-
-    @media only screen and (min-width: 450px) {
-        .homeSectionContent {
-            top: 13%;
-            left: -28%;
-            gap: 10% 35%;
-        }
-
-        .homeSectionContent .shape {
-            width: 325px;
-            height: 325px;
-        }
-    }
-
-    .homeSectionContent .shape .img,
-    .homeSectionContent .shape .title {
-        transform: rotate(-90deg);
-        text-align: center;
-    }
-
-    .homeSectionContent .shape .img {
-        position: absolute;
-        width: 65%;
-        height: 65%;
-        top: 17%;
-        left: 11%;
-        transform: rotate(-90deg) scale(1.5);
-    }
-
-    .homeSectionContent .shape:nth-child(2) .img img,
-    .homeSectionContent .shape:nth-child(3) .img img {
-        display: none;
-    }
-
-    .homeSectionContent .shape:nth-child(1) .img img {
-        filter: none;
     }
 
     /* ----- ABOUT ----- */
@@ -511,7 +419,6 @@
 
     .about .sectionContent {
         flex-direction: column;
-        gap: 40px;
     }
 
     .about .img {
@@ -565,6 +472,16 @@
         width: 90%;
     }
 
+    @media only screen and (min-width: 900px) and (max-width: 1024px) {
+        .skills .sectionContent {
+            justify-content: flex-start;
+        }
+
+        .skills .row {
+            width: 48%;
+        }
+    }
+
     /* ----- RESUME ----- */
     .resume .sectionContent {
         flex-direction: column;
@@ -588,46 +505,6 @@
         box-shadow: var(--neumBtn-Small-Light);
     }
 
-    /* ----- FACTS ----- */
-    .facts .sectionContent {
-        gap: 25px;
-        flex-wrap: wrap;
-    }
-
-    .facts .fact {
-        width: 40%;
-    }
-
-    /* ----- SERVECIES ----- */
-    .services .sectionContent {
-        flex-wrap: wrap;
-    }
-
-    .services .service {
-        width: 325px;
-        height: 325px;
-    }
-
-    .service .img {
-        width: 125px;
-        height: 125px;
-    }
-
-    /* ----- PORTFOLIO ----- */
-    .portfolio .controls {
-        gap: 20px;
-    }
-
-    .portfolio .sectionContent .card {
-        width: 300px;
-        height: 151px;
-        box-shadow: var(--neumBtn-Medium-Light);
-    }
-
-    .html.dark .portfolio .sectionContent .card {
-        box-shadow: var(--neumBtn-Medium-Dark);
-    }
-
     /* ----- FOOTER ----- */
     .footer .social {
         gap: 25px;
@@ -637,25 +514,15 @@
         text-align: center;
         line-height: var(--line-height-normal);
     }
+}
 
-    .topArrow {
-        width: 50px;
-        height: 50px;
-        border-radius: 15px;
-        font-size: var(--normal-size);
-        box-shadow: var(--neumBtn-Small-Light);
+@media only screen and (min-width: 1026px) and (max-width: 1500px) {
+    .resume .sectionContent {
+        flex-direction: column;
     }
 
-    .html.english .topArrow {
-        left: unset;
-        right: 25px;
-    }
-
-    .html.dark .topArrow {
-        box-shadow: var(--neumBtn-Small-Dark);
-    }
-
-    .topArrow.show {
-        bottom: 100px;
+    .column {
+        width: 100%;
+        margin: unset;
     }
 }

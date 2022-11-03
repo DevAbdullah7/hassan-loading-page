@@ -4,55 +4,14 @@ let body = document.querySelector('.body')
 let nav = document.querySelector('.nav')
 let mainContent = document.querySelector('.mainContent')
 let footer = document.querySelector('.footer');
-let topArrowBtn = document.querySelector('.topArrow');
 
 // Website Sittings Showen ( Language - Mood )
-const settingsBtn = document.querySelector('.nav #settingsBtn')
-const moodBtn = document.querySelector('.nav #moodBtn')
 const languageBtn = document.querySelector('.nav #languageBtn')
-settingsBtn.addEventListener('click', () => {
-    settingsBtn.classList.toggle('active')
+languageBtn.addEventListener('click', () => {
     languageBtn.classList.toggle('active')
-    moodBtn.classList.toggle('active')
 })
 function closeSettings() {
-    settingsBtn.classList.remove('active')
     languageBtn.classList.remove('active')
-    moodBtn.classList.remove('active')
-}
-
-// Website Mood ( Light Mood - Dark Mood )
-function lightMood() {
-    window.localStorage.setItem('mood', 'light');
-    moodBtn.classList.remove('dark');
-    html.classList.remove('dark');
-    moodBtn.classList.add('light');
-    html.classList.add('light');
-}
-function darkMood() {
-    window.localStorage.setItem('mood', 'dark');
-    moodBtn.classList.remove('light');
-    html.classList.remove('light');
-    moodBtn.classList.add('dark');
-    html.classList.add('dark');
-}
-
-moodBtn.addEventListener('click', () => {
-    if (moodBtn.classList.contains('light')) {
-        darkMood()
-    } else if (moodBtn.classList.contains('dark')) {
-        lightMood()
-    }
-    closeSettings()
-})
-if (window.localStorage.hasOwnProperty('mood')) {
-    if (localStorage.valueOf('mood').mood !== 'dark') {
-        lightMood();
-    } else {
-        darkMood();
-    }
-} else {
-    lightMood();
 }
 
 // Language Changeing
@@ -90,21 +49,6 @@ if (window.localStorage.hasOwnProperty('language')) {
 }
 
 // Scralling Transition 
-function topArrow() {
-    if (window.innerWidth < 450) {
-        if (window.scrollY > 2750) {
-            topArrowBtn.classList.add('show')
-        } else {
-            topArrowBtn.classList.remove('show')
-        }
-    } else {
-        if (window.scrollY > 1750) {
-            topArrowBtn.classList.add('show')
-        } else {
-            topArrowBtn.classList.remove('show')
-        }
-    }
-}
 function reveal() {
     let sections = document.querySelectorAll('.section')
     for (let i = 0; i < sections.length; i++) {
@@ -152,7 +96,6 @@ function startCount(el) {
 
 let skillsNumsAnimation = false;
 window.addEventListener('scroll', () => {
-    topArrow();
     reveal();
 });
 
@@ -187,3 +130,9 @@ function showCertificate(el) {
         img.classList.remove('show')
     }
 }
+
+window.addEventListener('load', () => {
+    let tempTimerOut = setTimeout(() => {
+        reveal()
+    }, 1000)
+})
